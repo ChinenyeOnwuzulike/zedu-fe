@@ -100,10 +100,15 @@ export const ChannelDetailsContent = ({ setIsOpen }: any) => {
         <div className="flex items-center space-x-3 overflow-auto">
           <Button
             variant={"outline"}
-            className={`h-fit p-[0.435rem] font-semibold text-[0.8125rem] text-[#344054] gap-1 ${starred ? "border-primary-500" : ""}`}
+            className={`h-fit p-[0.435rem] font-semibold text-[0.8125rem] text-[#344054] gap-1 ${starred ? "border-[#EAAA08] bg-amber-50/40" : ""}`}
             onClick={handleStarred}
+            aria-label={starred ? "Unstar channel" : "Star channel"}
           >
-            <StarIcon color={starred ? "rgb(113, 65, 248)" : ""} />
+            <StarIcon
+              filled={starred}
+              color={starred ? "#EAAA08" : "#98A2B3"}
+              size={18}
+            />
           </Button>
 
           <Button

@@ -169,11 +169,15 @@ const ChannelHeader = () => {
               disabled={starLoading}
               onClick={handleToggleStar}
               className={cn(
-                "p-1 rounded-md transition-colors hover:bg-gray-100 dark:hover:bg-zinc-800 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-500",
+                "p-1.5 rounded-md transition-all duration-150 hover:bg-gray-100 dark:hover:bg-zinc-800 active:scale-95 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-500",
                 starLoading ? "opacity-60 cursor-not-allowed" : "cursor-pointer"
               )}
             >
-              <StarIcon color={isStarred ? "#EAAA08" : "#98A2B3"} />
+              <StarIcon
+                filled={isStarred}
+                color={isStarred ? "#EAAA08" : "#98A2B3"}
+                size={18}
+              />
             </button>
           </Tooltips>
 
