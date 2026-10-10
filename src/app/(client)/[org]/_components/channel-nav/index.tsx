@@ -166,12 +166,8 @@ const ChannelHeader = () => {
             <button
               type="button"
               aria-label={isStarred ? "Unstar channel" : "Star channel"}
-              disabled={starLoading}
               onClick={handleToggleStar}
-              className={cn(
-                "p-1.5 rounded-md transition-all duration-150 hover:bg-gray-100 dark:hover:bg-zinc-800 active:scale-95 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-500",
-                starLoading ? "opacity-60 cursor-not-allowed" : "cursor-pointer"
-              )}
+              className="p-1.5 rounded-md transition-all duration-150 hover:bg-gray-100 dark:hover:bg-zinc-800 active:scale-95 cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-500"
             >
               <StarIcon
                 filled={isStarred}
